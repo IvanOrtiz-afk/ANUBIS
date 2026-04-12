@@ -359,8 +359,6 @@ if __name__ == "__main__":
 
     try:
 
-        keep_alive()
-
         client.run(TOKEN)
 
     except Exception as e:
