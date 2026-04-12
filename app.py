@@ -9,24 +9,8 @@ import os
 import unicodedata
 from discord import app_commands
 
-# --- Flask para keep alive ---
-app = Flask('')
-
-@app.route('/')
-def home():
-    return "Bot activo"
-
-def run():
-    app.run(host='0.0.0.0', port=8080)
-
-def keep_alive():
-    t = Thread(target=run)
-    t.start()
-
-
 # --- CONFIGURACIÓN ---
-with open("token.txt") as f:
-    TOKEN = f.read().strip()
+TOKEN = os.getenv("TOKEN")
 
 ID_CANAL_REGISTRO = 1464446801993142314
 LOG_CHANNEL_ID = 1464448974445613056
