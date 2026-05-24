@@ -10,7 +10,7 @@ import unicodedata
 from discord import app_commands
 
 # --- CONFIGURACIÓN ---
-TOKEN = os.getenv("TOKEN")
+with open("token.txt", "r", encoding="utf-8") as f: TOKEN = f.read().strip()
 
 ID_CANAL_REGISTRO = 1464446801993142314
 LOG_CHANNEL_ID = 1464448974445613056
